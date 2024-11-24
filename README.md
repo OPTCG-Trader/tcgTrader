@@ -14,7 +14,7 @@ An app to allow trading between trading card game players and collectors.
 
 ### App Evaluation
 
-- TCG Trader - API available (TCG Player)
+- TCG Trader - API available (OPTCG API)
 - Category: Trading/Collectibles
 
 Why it's good for Mobile:
@@ -55,7 +55,7 @@ Scope:
 - Future iterations could include advanced features like trade value 
     calculators, a rating system for trusted traders, and integration with more 
     APIs for deeper collection insights.
-- 20The project is easily defined. 
+- The project is easily defined. 
 
 
 ## Product Spec
@@ -66,9 +66,10 @@ Scope:
 
 1. Trades list
 2. Desired cards list
-3. TCG Player API integration
-4. Look for trades functionality
-5. Settings menu and login
+3. OPTCG API
+4. 
+5. Look for trades functionality
+6. Settings menu and login
 
 **Optional Features**
 
