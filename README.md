@@ -124,7 +124,8 @@ Scope:
 
 ## Wireframes
 
-![wireframe](https://hackmd.io/_uploads/H1HKi7xmye.jpg)
+
+![wireframe](https://hackmd.io/_uploads/S1Z7h4e7Jg.png)
 
 <br>
 
