@@ -81,29 +81,22 @@ Scope:
     planning or lifestyle adjustments.
     - The project is easily defined. 
 
-
-TCG Trader - API available (TCG Player)
+- TCG Trader - API available (OPTCG API)
 - Category: Trading/Collectibles
 
 Why it's good for Mobile:
-- Instant access to your trading lists and matches on the go.
-- Push notifications for new matching trades in your area.
-- Location-based matching ensures convenience for local meetups or     
-    transactions.
+- Instant access to your trade lists 
+- Future implementation of searching for trades based on location
 
 Story:
-- TCG Trader revolutionizes trading for trading card enthusiasts by providing
-    a seamless way to connect with others who have what you need and want what   
-    you have.
+- An app that helps you categorize TCG cards to set up trades
 - Helps collectors who don't necessarily want to sell cards, but are more 
     interested in trading.
-- Creates a more engaging trading experience by fostering local connections 
-    and communities.
 
 Market:
 - Specifically targets trading card game (TCG) collectors, including those 
     involved in games like Magic: The Gathering, Pokémon, Yu-Gi-Oh!, and in our 
-    base case, the one piece trading card game.
+    base case, the One Piece Trading card game.
 - Provides a much-needed digital tool for a niche group that typically relies 
     on manual tracking or in-person meetups.
 - Appeals to casual and hardcore collectors alike.
@@ -111,17 +104,15 @@ Market:
 Habit:
 - Encourages regular use as users log new cards they acquire or wish to 
     trade.
-- Users will frequently check for matches, particularly after events, 
-    purchases, or booster pack openings.
 - Over time, the app becomes the go-to platform for managing TCG trades and 
     inventory.
+- Future funtionality will have users frequently check for matches, particularly after events, 
+    purchases, or booster pack openings.
 
 Scope:
 - The initial app includes essential features: creating and managing two card 
-    lists (trade away and want), location-based trade pairing, and notifications 
-    for matches.
-- Future iterations could include advanced features like trade value 
-    calculators, a rating system for trusted traders, and integration with more 
-    APIs for deeper collection insights.
-- 20The project is easily defined. 
+    lists (trade away and want), Account creation and management
+- Future iterations Will allow players to be matched to trade based on location
+- The project is easily defined. 
+
     
