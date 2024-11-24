@@ -10,7 +10,7 @@ Glucose Tracker - An app to track blood Sugar API available (Dexcom)
 Category: Medical
 
 Why it's good for Mobile:
-    -Notifications to log Glucose
+-Notifications to log Glucose
     -The need to log anywhere
     -Possible wearable integration, Glucometers and Pumps
 
