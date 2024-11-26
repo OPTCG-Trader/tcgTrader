@@ -8,7 +8,7 @@
 
 # Top 3 Brainstorming Ideas
 ## Glucose Tracker - An app to track blood Sugar API available (Dexcom)
-    Category: Medical
+Category: Medical
 
 ### Why it's good for Mobile:
 - Notifications to log Glucose
@@ -38,7 +38,7 @@
     
 
 ## Diabetic Notebook - API avalable (Dexcom)
-    Category: Medical
+Category: Medical
 
 ### Why it's good for Mobile:
 - Quick access to notes and reminders about meals, medications, and blood sugar levels.
@@ -66,7 +66,7 @@
 - The project is easily defined. 
 
 ## TCG Trader - API available (OPTCG API)
-    Category: Trading/Collectables
+Category: Trading/Collectables
 
 ### Why it's good for Mobile:
 - Instant access to your trade lists 
@@ -95,5 +95,5 @@
 
 # Chosen Brainstorming Idea
 ## TCG Trader - API available (OPTCG API)
-    Category: Trading/Collectables
+Category: Trading/Collectables
 - Of my brainstorming options, I chose to expand upon this idea as I wanted to avoid creating a medical-based app.
