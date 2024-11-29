@@ -62,9 +62,9 @@ Scope:
 
 **Optional Features**
 
-1. Trade value calculator to ensure fair trades
-2. Location based matching for trades using trades / desired lists
-3. Full Chat functionality. 
+1. Customizable Notifications. (Set reminders to check lists)
+2. Favorites / Tags for card organization
+3. Settings menu 
 
 ### 2. Screen Archetypes
 
