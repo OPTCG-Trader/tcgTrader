@@ -135,7 +135,6 @@ Issues worked on this sprint
 - bottom nav created and implemented.
 - framework of the Trades screen completed. 
 
-[Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3
 ![Milestone 1](https://github.com/user-attachments/assets/f6910054-aab1-418e-b989-a55283cb9a60)
 
 Milestone 3 - Build Sprint 2 (Unit 9)
