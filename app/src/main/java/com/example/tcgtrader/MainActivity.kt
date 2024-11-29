@@ -3,6 +3,8 @@ package com.example.tcgtrader
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,7 +25,35 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // (Login functionality will be added here later)
+        findViewById<Button>(R.id.login_button).setOnClickListener {
+            val email = findViewById<EditText>(R.id.login_email).text.toString()
+            val password = findViewById<EditText>(R.id.login_password).text.toString()
+
+            if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                // Invalid email
+                Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
+            } else if (password.isEmpty() || password.length < 6) {
+                // Invalid password
+                Toast.makeText(this, "Please enter a valid password with at least 6 characters", Toast.LENGTH_SHORT).show()
+            } else {
+                signIn(email, password)
+            }
+        }
+
     }
+    private fun signIn(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Login Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
 
 }
