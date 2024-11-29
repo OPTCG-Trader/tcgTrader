@@ -114,14 +114,29 @@ Scope:
 
 Milestone 2 - Build Sprint 1 (Unit 8)
 GitHub Project board
-[Add screenshot of your Project Board with three milestones visible in this section] 
+
+-- I forgot to take a screenshot before working, so some issues were already resolved. 
+![image](https://github.com/user-attachments/assets/196f4957-8cbf-44fa-822a-24ffae75b7e6)
+
 
 Issue cards
 [Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] 
+![image](https://github.com/user-attachments/assets/0ef6f461-9723-49c6-a634-434b7349caab)
+
 [Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.] 
+![image](https://github.com/user-attachments/assets/fcf61502-54be-4cb8-ba26-4692982b0d48)
+
 Issues worked on this sprint
-List the issues you completed this sprint
+- List the issues you completed this sprint
+- Firebase integration
+- Account Creation implemented
+- Log in implemented. 
+- Home page created
+- bottom nav created and implemented.
+- framework of the Trades screen completed. 
+
 [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3
+![Milestone 1](https://github.com/user-attachments/assets/f6910054-aab1-418e-b989-a55283cb9a60)
 
 Milestone 3 - Build Sprint 2 (Unit 9)
 GitHub Project board
