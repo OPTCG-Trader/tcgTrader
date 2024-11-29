@@ -26,25 +26,29 @@ class HomeActivity : AppCompatActivity() {
             Toast.makeText(this, "Settings placeholder clicked", Toast.LENGTH_SHORT).show()
         }
 
-        // Search button
         findViewById<Button>(R.id.search_button).setOnClickListener {
             // Placeholder for search functionality
         }
 
-        // Handle Bottom Navigation
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
+                R.id.nav_home -> {
+                    true
+                }
                 R.id.nav_trades -> {
-                    // Navigate to trades screen
+                    val intent = Intent(this, TradesActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_desired -> {
-                    // Navigate to desired screen
+                    Toast.makeText(this, "Navigate to Desired", Toast.LENGTH_SHORT).show()
                     true
                 }
                 else -> false
             }
         }
+        bottomNavigation.selectedItemId = R.id.nav_home
+
     }
 }
