@@ -1,0 +1,88 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp">
+
+    <!-- Card Details Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_market_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price"
+            android:textSize="14sp"
+            android:paddingTop="4dp" />
+
+        <TextView
+            android:id="@+id/card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:textSize="14sp"
+            android:paddingTop="2dp" />
+
+        <TextView
+            android:id="@+id/card_set_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set_id"
+            android:textSize="14sp"
+            android:paddingTop="2dp" />
+
+        <TextView
+            android:id="@+id/card_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="color"
+            android:textSize="14sp"
+            android:paddingTop="2dp" />
+
+        <TextView
+            android:id="@+id/card_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="type"
+            android:textSize="14sp"
+            android:paddingTop="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/add_to_trades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Trades"
+            android:backgroundTint="@android:color/holo_blue_light" />
+
+        <Button
+            android:id="@+id/add_to_desired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Desired"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</LinearLayout>

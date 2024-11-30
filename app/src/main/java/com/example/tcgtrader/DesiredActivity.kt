@@ -10,11 +10,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
-class TradesActivity : AppCompatActivity() {
+class DesiredActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: TradesAdapter
-    private val tradesList = mutableListOf<Card>()
+    private lateinit var adapter: DesiredAdapter
+    private val desiredList = mutableListOf<Card>()
     private val firestore = FirebaseFirestore.getInstance()
     private val auth = FirebaseAuth.getInstance()
 
@@ -22,15 +22,12 @@ class TradesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trades_list)
 
-
         recyclerView = findViewById(R.id.trades_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = TradesAdapter(tradesList) { card -> deleteCardFromTrades(card) }
+        adapter = DesiredAdapter(desiredList) { card -> deleteCardFromDesired(card) }
         recyclerView.adapter = adapter
 
-
-        fetchTrades()
-
+        fetchDesired()
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigation.setOnItemSelectedListener { item ->
@@ -41,20 +38,20 @@ class TradesActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_trades -> {
+                    val intent = Intent(this, TradesActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_desired -> {
-                    val intent = Intent(this, DesiredActivity::class.java)
-                    startActivity(intent)
                     true
                 }
                 else -> false
             }
         }
-        bottomNavigation.selectedItemId = R.id.nav_trades
+        bottomNavigation.selectedItemId = R.id.nav_desired
     }
 
-    private fun fetchTrades() {
+    private fun fetchDesired() {
         val currentUser = auth.currentUser
         if (currentUser == null) {
             Toast.makeText(this, "User not logged in!", Toast.LENGTH_SHORT).show()
@@ -62,23 +59,23 @@ class TradesActivity : AppCompatActivity() {
         }
 
         val userId = currentUser.uid
-        val tradesCollection = firestore.collection("users").document(userId).collection("trades")
+        val desiredCollection = firestore.collection("users").document(userId).collection("desired")
 
-        tradesCollection.get().addOnSuccessListener { querySnapshot ->
-            tradesList.clear()
+        desiredCollection.get().addOnSuccessListener { querySnapshot ->
+            desiredList.clear()
             for (document in querySnapshot.documents) {
                 val card = document.toObject(Card::class.java)
                 if (card != null) {
-                    tradesList.add(card)
+                    desiredList.add(card)
                 }
             }
             adapter.notifyDataSetChanged()
         }.addOnFailureListener {
-            Toast.makeText(this, "Failed to fetch Trades list.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Failed to fetch Desired list.", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun deleteCardFromTrades(card: Card) {
+    private fun deleteCardFromDesired(card: Card) {
         val currentUser = auth.currentUser
         if (currentUser == null) {
             Toast.makeText(this, "User not logged in!", Toast.LENGTH_SHORT).show()
@@ -86,16 +83,16 @@ class TradesActivity : AppCompatActivity() {
         }
 
         val userId = currentUser.uid
-        val tradesCollection = firestore.collection("users").document(userId).collection("trades")
+        val desiredCollection = firestore.collection("users").document(userId).collection("desired")
 
-        tradesCollection.document(card.id).delete()
+        desiredCollection.document(card.id).delete()
             .addOnSuccessListener {
-                tradesList.remove(card)
-                adapter.notifyDataSetChanged()
-                Toast.makeText(this, "${card.name} deleted from Trades!", Toast.LENGTH_SHORT).show()
+                desiredList.remove(card) // Remove card locally
+                adapter.notifyDataSetChanged() // Notify adapter of the change
+                Toast.makeText(this, "${card.name} deleted from Desired!", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener {
-                Toast.makeText(this, "Failed to delete ${card.name} from Trades.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Failed to delete ${card.name} from Desired.", Toast.LENGTH_SHORT).show()
             }
     }
 }

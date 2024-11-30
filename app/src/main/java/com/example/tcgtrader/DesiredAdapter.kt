@@ -6,29 +6,30 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class TradesAdapter(
+class DesiredAdapter(
     private val cards: MutableList<Card>,
-    private val deleteCallback: (Card) -> Unit
-) : RecyclerView.Adapter<TradesAdapter.TradesViewHolder>() {
+    private val deleteCallback: (Card) -> Unit // Callback for delete action
+) : RecyclerView.Adapter<DesiredAdapter.DesiredViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TradesViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DesiredViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_trade_desired, parent, false)
-        return TradesViewHolder(view)
+        return DesiredViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: TradesViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DesiredViewHolder, position: Int) {
         val card = cards[position]
         holder.bind(card)
 
+        // Set long-press listener for delete action
         holder.itemView.setOnLongClickListener {
-            deleteCallback(card)
+            deleteCallback(card) // Trigger delete callback with the selected card
             true
         }
     }
 
     override fun getItemCount(): Int = cards.size
 
-    class TradesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class DesiredViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val cardId: TextView = itemView.findViewById(R.id.card_id)
         private val cardName: TextView = itemView.findViewById(R.id.card_name)
         private val cardRarity: TextView = itemView.findViewById(R.id.card_rarity)

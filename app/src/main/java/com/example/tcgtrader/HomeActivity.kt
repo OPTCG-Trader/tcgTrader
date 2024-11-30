@@ -15,19 +15,19 @@ class HomeActivity : AppCompatActivity() {
 
         // Logout button
         findViewById<Button>(R.id.logout_button).setOnClickListener {
-            // Log out the user and return to login screen
             FirebaseAuth.getInstance().signOut()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
-        // Settings button
         findViewById<Button>(R.id.settings_button).setOnClickListener {
-            Toast.makeText(this, "Settings placeholder clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
         }
 
         findViewById<Button>(R.id.search_button).setOnClickListener {
-            // Placeholder for search functionality
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
         }
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
@@ -42,7 +42,8 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_desired -> {
-                    Toast.makeText(this, "Navigate to Desired", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, DesiredActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 else -> false
