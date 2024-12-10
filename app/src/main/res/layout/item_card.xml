@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="@drawable/rounded_item_background"
     android:padding="8dp"
-    android:background="@android:color/white"
     android:layout_marginBottom="8dp">
 
-    <!-- Card Details Section -->
-    <LinearLayout
+        <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:background="@drawable/rounded_item_background"
         android:orientation="vertical">
 
         <TextView
@@ -20,7 +20,9 @@
             android:layout_height="wrap_content"
             android:text="name"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@drawable/rounded_item_background"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/card_market_price"
@@ -28,7 +30,9 @@
             android:layout_height="wrap_content"
             android:text="price"
             android:textSize="14sp"
-            android:paddingTop="4dp" />
+            android:paddingTop="4dp"
+            android:background="@drawable/rounded_item_background"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/card_text"
@@ -36,7 +40,9 @@
             android:layout_height="wrap_content"
             android:text="text"
             android:textSize="14sp"
-            android:paddingTop="2dp" />
+            android:paddingTop="2dp"
+            android:background="@drawable/rounded_item_background"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/card_set_id"
@@ -44,7 +50,9 @@
             android:layout_height="wrap_content"
             android:text="set_id"
             android:textSize="14sp"
-            android:paddingTop="2dp" />
+            android:paddingTop="2dp"
+            android:background="@drawable/rounded_item_background"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/card_color"
@@ -52,7 +60,9 @@
             android:layout_height="wrap_content"
             android:text="color"
             android:textSize="14sp"
-            android:paddingTop="2dp" />
+            android:paddingTop="2dp"
+            android:background="@drawable/rounded_item_background"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/card_type"
@@ -60,14 +70,18 @@
             android:layout_height="wrap_content"
             android:text="type"
             android:textSize="14sp"
-            android:paddingTop="2dp" />
-    </LinearLayout>
+            android:paddingTop="2dp"
+            android:background="@drawable/rounded_item_background"
+            android:textColor="@android:color/white" />
+        </LinearLayout>
 
-    <LinearLayout
+            <!-- Button Section -->
+        <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical"
+        android:background="@drawable/rounded_item_background"
         android:gravity="end">
 
         <Button
@@ -84,5 +98,5 @@
             android:text="Add to Desired"
             android:backgroundTint="@android:color/holo_green_light"
             android:layout_marginTop="8dp" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>

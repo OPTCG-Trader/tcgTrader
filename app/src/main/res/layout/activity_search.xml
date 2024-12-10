@@ -6,19 +6,17 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Dropdown for Sets and Decks -->
     <Spinner
         android:id="@+id/set_deck_dropdown"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:popupBackground="#000000"
+        android:layout_gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0" />
 
-    <!-- Search Input -->
 
-    <!-- Search Button -->
     <EditText
         android:id="@+id/search_input"
         android:layout_width="0dp"
@@ -30,6 +28,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/set_deck_dropdown"
+        android:backgroundTint="#121212"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -41,7 +40,6 @@
         app:layout_constraintBottom_toBottomOf="@id/search_input"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- RecyclerView for displaying cards -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cards_recycler_view"
         android:layout_width="0dp"
