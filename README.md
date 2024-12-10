@@ -139,12 +139,17 @@ Issues worked on this sprint
 
 Milestone 3 - Build Sprint 2 (Unit 9)
 GitHub Project board
-[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] 
+![image](https://github.com/user-attachments/assets/17125a9b-9c41-4994-a599-ead6199249b9)
+
 
 Completed user stories
-List the completed user stories from this unit
-List any pending user stories / any user stories you decided to cut from the original requirements
-[Add video/gif of your current application that shows build progress] 
+Search Page
+Settings menu
+Home page
+Desired cards list
+Trades List
+API integration
+![trades_and_Desired](https://github.com/user-attachments/assets/ce353a2b-6dec-4ab4-824b-a0d57a1a4426)
 
 App Demo Video
 Embed the YouTube/Vimeo link of your Completed Demo Day prep video
