@@ -153,3 +153,6 @@ API integration
 
 App Demo Video
 Embed the YouTube/Vimeo link of your Completed Demo Day prep video
+[![Watch on YouTube](https://img.youtube.com/vi/e7prCTz48gM/0.jpg)](https://youtube.com/shorts/e7prCTz48gM)
+
+
